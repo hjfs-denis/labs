@@ -94,3 +94,6 @@ begin
    p_FIRSTFUNCTION;
 end;
 /
+
+
+-- Create a view 
