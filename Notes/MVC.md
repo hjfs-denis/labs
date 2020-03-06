@@ -1,8 +1,23 @@
 MVC is an architecture
 
-# Traditional MVC
 
-    Built by using Servlet & JSP
+# MVC (Model View Controller) Architecture
+
+1. Has UI for client (View)
+2. Contains data for (Modal)
+3. Controller helps navigate between views (Controller)
+
+
+# In traditional MVC
+1. Views are built in JSP
+2. Modals by POJO
+3. Controller by servlet
+
+
+
+-----------------------------------------------------------------------------------------------------
+
+
 
 # Diff b/w library, architecture & DP
     
