@@ -72,9 +72,11 @@ In DB :
     Native SQL
     Std way : JPA 
 
+    Eg : createQuery("from Customer ", Customer.class);
 
 
-# To do
+
+# To configure Hibernate
 1. Step-1
     * Create a POJO (Entity Bean)
         ~ contains property, setters and getters and toString
@@ -112,7 +114,13 @@ In DB :
 
     # Note : 
     1. First 3 points to establish hibernate (Similar to ApplicationContext in Spring)
+        ~ We can use Spring annotaion instead of these 3 points and config.
+            Eg : @autowired - {Need to configure in Spring}
+                @Repository - {Need to mention this bean is specific for repo}
+
     2. Remaining points for db actions
+        ~ We can use Spring annotation instead of managing transaction
+            Eg : @Transactional - {Need to configure in Spring}
 
     * Create the Session
         Eg : Session s = sessionfactory.openSession();
@@ -126,5 +134,24 @@ In DB :
         Eg : t.commit();
     * Close the session
         Eg : s.close();
+
+
+
+# Steps to configure Hibernate  using Annotations
+
+1. Annotations
+    * @Repository   
+    * @Service
+    * To map beans with field instead of using constructor or setter based injection
+        1. @autowired
+    
+    *  JPA Annotations uses instead of hibernate XML
+        1. @Entity
+        2. @table(name = "")
+        3. @Column(name = "")
+    * JPA Annotation for sequence from backend 
+        1. @ID
+        2. @GeneratedValue
+        3. @SequenceGenerator        
 
 

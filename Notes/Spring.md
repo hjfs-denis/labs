@@ -11,6 +11,8 @@
 3. helps build losely coupled systems
 4. Open Source and has large community
 5. Has numerous modules like Spring core, MVC, Spring REST etc..,
+6. Spring is unobstrucive 
+    (We can plug single spirng module in existing web project without affecting exixting ones) (Integrates well with other frameworks)
 
 
 
@@ -116,14 +118,17 @@
                 In setter based injection the variable name should mapped in the  XML file
 
 
-    3. (Field Based Injection)
+    3. Using Fields (Field Based Injection)
+        1. Getting instance from Spring using annotaion and Private variable
+            Eg : @autowired
+                private SessionFactory sf;
 
 
 
 
 
 
-# Steps To Do
+# Steps To configure Spring
 
 1. Step-1
     * Create a POJO (Bean)
@@ -141,6 +146,21 @@
 
 4. Step-4
     * Use the bean in the main program
+
+
+
+# Steps for Annotation Configuration
+
+1. Use this in XML file for creating bean for all POJO's in a package
+    <context:component-scan base-package="com.demo" />
+
+2. Use @Autowire along with interface name in any java class to get the instance.
+    @autowired
+    private OracleRepository or;
+
+
+    
+
 
 -----------------------------------------------------------------------------------------------------
 
